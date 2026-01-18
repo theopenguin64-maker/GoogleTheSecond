@@ -1,0 +1,256 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  color: #202124;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.homeButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  color: #3c4043;
+  text-decoration: none;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.homeButton:hover {
+  background-color: #e8eaed;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-color: #bdc1c6;
+}
+
+.homeButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.passwordForm {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.passwordInput:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+}
+
+.passwordInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.passwordButton {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.passwordButton:hover:not(:disabled) {
+  background-color: #3367d6;
+}
+
+.passwordButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.uploadSection {
+  width: 100%;
+  max-width: 584px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.dropZone {
+  width: 100%;
+  min-height: 200px;
+  border: 2px dashed #dadce0;
+  border-radius: 12px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.dropZone:hover {
+  border-color: #4285f4;
+  background-color: #f8f9fa;
+}
+
+.dropZone.dragOver {
+  border-color: #4285f4;
+  background-color: #e8f0fe;
+  border-style: solid;
+}
+
+.dropZone:active {
+  transform: scale(0.98);
+}
+
+.dropZoneContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  pointer-events: none;
+}
+
+.dropZoneIcon {
+  color: #5f6368;
+  transition: color 0.2s ease;
+}
+
+.dropZone:hover .dropZoneIcon,
+.dropZone.dragOver .dropZoneIcon {
+  color: #4285f4;
+}
+
+.dropZoneText {
+  font-size: 14px;
+  color: #5f6368;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.dropZone:hover .dropZoneText,
+.dropZone.dragOver .dropZoneText {
+  color: #202124;
+}
+
+.dropZone:has(input:disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.error {
+  color: #ea4335;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.fileList {
+  width: 100%;
+  max-width: 584px;
+  margin-top: 32px;
+}
+
+.fileListTitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #202124;
+}
+
+.fileListItems {
+  list-style: none;
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #dfe1e5;
+  transition: background-color 0.1s ease;
+}
+
+.fileItem:last-child {
+  border-bottom: none;
+}
+
+.fileItem:hover {
+  background-color: #f8f9fa;
+}
+
+.fileName {
+  font-size: 14px;
+  color: #202124;
+  flex: 1;
+  margin-right: 12px;
+  word-break: break-word;
+}
+
+.deleteButton {
+  padding: 6px 16px;
+  background-color: #ea4335;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c5221f;
+}
